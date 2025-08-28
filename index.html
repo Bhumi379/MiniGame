@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supercell Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a; /* darker shade */
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #1a1a1a;
+      border-radius: 25px;
+      padding: 8px 15px;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      padding: 5px;
+      width: 180px;
+    }
+
+    .menu {
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .games-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 80px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      margin-top: 60px;
+    }
+
+    .card {
+      position: relative;
+      width: 220px;
+      height: 300px;
+      border-radius: 20px;
+      padding: 20px;
+      color: #fff;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 160px;
+      height: auto;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .card p {
+      margin: 3px 0;
+      font-size: 14px;
+    }
+
+    .card span {
+      font-weight: bold;
+      color: yellow;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    }
+
+    /* Card Colors */
+    .red { background: linear-gradient(145deg, #2a0000, #ff1e1e); }
+    .blue { background: linear-gradient(145deg, #001a33, #1e90ff); }
+    .brown { background: linear-gradient(145deg, #1a0e00, #804000); }
+    .purple { background: linear-gradient(145deg, #1a0033, #8000ff); }
+
+    /* Footer Nav */
+    
+
+    /* Scrollbar Hidden */
+    .games-section::-webkit-scrollbar {
+      display: none;
+    }
+
+    .menu button {
+background: none;
+border: none;
+margin-left: 15px;
+font-size: 16px;
+cursor: pointer;
+color: #e5e7eb;
+transition: color 0.3s;
+}
+.menu button:hover {
+color: #f9a8d4;
+}
+.heading{
+    text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 24px;
+      margin: 60px 0;
+      color: #fff;
+}
+.card-img {
+  width: 300px;
+  height: 600px;     /* Adjust this value to control how much of the image shows */
+  object-fit: cover; /* Crops the image neatly */
+  object-position: top; /* Shows the top half */
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+
+}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">GAMEZONE</div>
+    <div class="search-bar">
+      🔍 <input type="text" placeholder="Search games...">
+    </div>
+    <div class="menu">
+           <button>Home</button>
+            <button>Games</button>
+            <button>About</button>
+    </div>
+  </header>
+
+  <!-- Games Section -->
+   <div class="heading">
+    <h1>WELCOME TO GAMEZONE</h1>
+   </div>
+   
+  <div class="games-section" id="games">
+    
+    <div class="card red">
+    <a href="whac-a-mole.html">
+    <img src="assets/pic4.png" alt="Game 1" class="card-img">
+    <div class="card-content">
+      <h3>Whac-A-Mole</h3>
+      <p>Arcade <span>Fun</span></p>
+    </div>
+  </a>
+</div>
+
+    <div class="card blue">
+      <img src="assets/pic5.png" alt="Game 2" class="card-img">
+      <div class="card-content">
+        <h3>Clash Royale</h3>
+        <p>Supercell <span>Strategy</span></p>
+      </div>
+    </div>
+
+    <div class="card brown">
+      <img src="https://supercell.com/images/6cfa4e3a43a3e4cd5b5e76d6c6d7a39a/clashofclans_thumbnail_1024.png" alt="Clash of Clans">
+      <div class="card-content">
+        <h3>Clash of Clans</h3>
+        <p>Supercell <span>Strategy</span></p>
+      </div>
+    </div>
+
+    <div class="card purple">
+      <img src="https://supercell.com/images/73f14e3a39b6e8c6e9b1e7d83a3d0e48/boombeach_thumbnail_1024.png" alt="Boom Beach">
+      <div class="card-content">
+        <h3>Boom Beach</h3>
+        <p>Supercell <span>Strategy</span></p>
+      </div>
+    </div>
+  </div>
+
+  
+

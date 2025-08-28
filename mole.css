@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: url("./mario-bg.jpg");
+    background-size: cover;
+}
+/* Header */
+.page-header {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: black;   /* 🔥 make navbar black */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links span {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    padding-left: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    outline: none;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon span {
+    margin-right: 10px;
+}
+
+.menu-button {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 20%;
+}
+
+.menu-button::before {
+    top: 30%;
+}
+
+.menu-button::after {
+    bottom: 30%;
+}
+
+
+#board {
+    width: 540px;
+    height: 540px;
+    /* background-color: green; */
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url("./soil.png");
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    width: 180px; 
+    height: 180px;
+    background-image: url("./pipe.png");
+    background-size: cover;
+}
+
+#board div img {
+    /* all img tags inside tiles */
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

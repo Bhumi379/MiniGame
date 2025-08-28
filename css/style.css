@@ -1,0 +1,192 @@
+/* General & Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f5; /* A light, clean background */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Page Layout */
+.page-container {
+    padding: 20px;
+}
+
+/* Header */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links span {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    padding-left: 30px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    outline: none;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon span {
+    margin-right: 10px;
+}
+
+.menu-button {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu-button::before,
+.menu-button::after {
+    content: '';
+    width: 60%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 20%;
+}
+
+.menu-button::before {
+    top: 30%;
+}
+
+.menu-button::after {
+    bottom: 30%;
+}
+
+/* Game Carousel */
+.game-carousel-wrapper {
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.game-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.game-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.game-card {
+    flex-shrink: 0;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-10deg) translateY(-20px);
+}
+
+.card-info {
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+.card-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.category {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Footer */
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.social-links span,
+.carousel-nav button {
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.carousel-nav button {
+    background: none;
+    border: 1px solid #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.carousel-nav button:hover {
+    background-color: #eee;
+}
